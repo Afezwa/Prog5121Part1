@@ -26,7 +26,7 @@ public class MainApp {
               System.out.print("Enter a password: ");
               String password = input.nextLine();
               
-              System.out.print("Enter your South African phone number (+27...):");
+              System.out.print("Enter your South African cell number (+27...):");
               String phone = input.nextLine();
               
               String response = login.registerUser(username, password, phone);
