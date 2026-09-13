@@ -8,7 +8,7 @@ package za.ac.iie.chatapppart1;
  *
  * @author Student
  */
-public class Login {
+public class Login  {
     String username;
     String password;
     String cellNumber;
@@ -19,7 +19,7 @@ public class Login {
     }
     
     //Step 6: Password validation - 8 chars, capital, number, special char
-    public boolean checkPasswordComplexity(String password) {
+    public boolean checkPasswordComplexity(String password)  {
         boolean hasCapital = false;
         boolean hasNumber = false;
         boolean hasSpecial = false;
