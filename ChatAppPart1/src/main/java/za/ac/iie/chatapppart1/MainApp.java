@@ -9,12 +9,12 @@ package za.ac.iie.chatapppart1;
  *
  * @author Student
  */
-public class MainApp {
+public class MainApp  {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         
         
-        Login login = new Login();
+        Login login = new  Login();
         
         //   Registration Section
         
