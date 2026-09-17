@@ -1,5 +1,5 @@
 #PROG5121 Part 1 - ChatApp
-**Student:** Afezwa Faith Mantla - ST19492608
+**Student:** Afezwa Faith Mantla - ST10402608
 **Module:** PROG5121 Programming 1A
 **GitHub:** https://github.com/Afezwa/Prog5121Part1
 
