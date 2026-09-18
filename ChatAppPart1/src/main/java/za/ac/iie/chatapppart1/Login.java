@@ -9,6 +9,7 @@ package za.ac.iie.chatapppart1;
  * @author Student
  */
 public class Login  {
+
     String firstName;
     String lastName;        
     String username;
@@ -66,7 +67,9 @@ public class Login  {
         this.username = username;
         this.password = password;
         this.cellPhoneNumber = cellPhoneNumber;      
+
         return "User registered successfully.";
+
     }
     
     //Step 9: Login feature
@@ -77,7 +80,9 @@ public class Login  {
     public String
             returnLoginStatus(boolean success) {
                 if (success){
+
                     return "Welcome " + firstName + "" + lastName + " it is great to see you again.";
+
                 } else {
                     return "Username or password incorrect, please try again.";
                 }
