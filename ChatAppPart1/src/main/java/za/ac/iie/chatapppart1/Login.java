@@ -9,6 +9,8 @@ package za.ac.iie.chatapppart1;
  * @author Student
  */
 public class Login  {
+    String firstName
+    String lastName
     String username;
     String password;
     String cellNumber;
@@ -39,37 +41,43 @@ public class Login  {
         return password.length() >= 8 && hasCapital && hasNumber && hasSpecial;
     }
     
-    //Step 7: Cell number validation - must start with +27 and <=12 chars
+    //Step 7: Cell number validation - using researched regex
+    //Regex source: W3Schools Java RegEx Article and StackOverFlow - South African mobile number validation
+    //URL: https://www.w3schools.com/java/java_regex.asp AND https://stackoverflow.com/questions/15739050/south-african-mobile-number-regex
+    //Accessed: 2026-09-17
+    //The pattern ^\+27\d{9}$ checks that number starts with +27 and has exactly 9 more digits (total 12 chars with +)
     public boolean checkCellPhoneNumber(String phone) {
-        return phone.startsWith("+27") && phone.length() <= 12;
+        return phone.matches("^\\+27\\d{9}$");
     }
     
     //Step 8: Register user - returns the EXACT messages they want
     public String registerUser(String username, String password, String phoneNumber) {
         if (!checkUserName(username)) {
-            return "Username is not correctly formatted; please ensure that your username contains an underscore and is no more that five characters in length.";
+            return "Username is not correctly formatted; please ensure that your username contains an underscore and is no more than five characters in length.";
         }
         if (!checkPasswordComplexity(password)) {
-            return "Password is not correctly formatted; please ensure that the passwprd contains at least eight characters, a capital letter, a number and a special character";
+            return "Password is not correctly formatted; please ensure that the password contains at least eight characters, a capital letter, a number and a special character";
         }
-        if (!checkCellPhoneNumber(phoneNumber)) {
+        if (!checkCellPhoneNumber(cellPhoneNumber)) {
             return "Cell phone number incorrectly formatted or does not contain international code.";
         }
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.username = username;
         this.password = password;
-         this.cellNumber = phoneNumber;      
+        this.cellPhoneNumber = cellPhoneNumber;      
          return "User registered successfully.";
     }
     
     //Step 9: Login feature
     public boolean loginUser(String username, String password) {
-        return this.username.equals(username) && this.password.equals(password);
+        return this.username != null && this.username.equals(username) && this.password.equals(password);
     }
     
     public String
             returnLoginStatus(boolean success) {
                 if (success){
-                    return "Welcome" + username + "it is great to see you agan.";
+                    return "Welcome " + firstName + "" + "it is great to see you agan.";
                 } else {
                     return "Username or passsword incorrect, please try again.";
                 }
