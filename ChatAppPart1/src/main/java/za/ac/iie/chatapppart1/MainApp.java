@@ -13,23 +13,29 @@ public class MainApp  {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         
-        
+        // Fixed: Created Login with empty constructor - will save in registerUser
         Login login = new  Login();
         
         //   Registration Section
         
         System.out.println("=== USER REGISTRATION ===");
+        
+        System .out.print("Enter your first name");
+               String firstName = input.nextLine();
             
+        System.out.print("Enter your last name");
+               String lastName = input.nextLine();
+               
         System.out.print("Enter a username: ");
               String username = input.nextLine();
               
-              System.out.print("Enter a password: ");
+        System.out.print("Enter a password: ");
               String password = input.nextLine();
               
-              System.out.print("Enter your South African cell number (+27...):");
-              String phone = input.nextLine();
+        System.out.print("Enter your South African cell number (+27...):");
+              String cellPhoneNumber = input.nextLine();
               
-              String response = login.registerUser(username, password, phone);
+              String response = login.registerUser(firstName, lastName, username, password, cellPhoneNumber);
                  System.out.println(response);
                  
                  //If registration failed, stop the program
