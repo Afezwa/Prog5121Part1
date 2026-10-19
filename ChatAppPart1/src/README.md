@@ -11,7 +11,7 @@ CHATAPPPART1
 pom.xml
 README.md
 src/main/java/za/ac/iie/chatapppart1/
-LoginTest.Java
+Login.java
 MainApp.java
 src/test/java/za/ac/iie/chatapppart1
 LoginTest.java
@@ -37,3 +37,20 @@ LoginTest.java
 ## References
 - W3Schools Java Regex: https://www.w3schools.com/java/java_regex.asp
 - StackOverflow SA Number Regex: https://stackoverflow.com/questions/15739050/south-africa-mobile-number-regex
+
+## Technologies Used 
+- Java 17
+- Maven
+- NetBeans
+- JUnit 5
+
+## Example Usage
+- Username: kyl_1
+- Password: Ch&sec8ke99!
+- Cell Number: +2783869967
+- Expected output: "Username successfully captured / Password succesfully captured / Cell phone number successfully added"
+- Login output: "Welcome Afezwa, it is great to see you again"
+
+## How o Run Tests
+Right-click project -> Test 
+All 10 tests in LoginTest.java should pass
