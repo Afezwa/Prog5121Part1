@@ -52,12 +52,12 @@ public class Login  {
     }
     
     //Step 8: Register user - returns the EXACT messages they want
-    public String registerUser(String firstName, String lastName, String username, String password, String cellPhoneNumber) {
+    public String registerUser(String username, String password, String cellPhoneNumber, String firstName, String lastName) {
         if (!checkUserName(username)) {
-            return "Username is not correctly formatted; please ensure that your username contains an underscore and is no more than five characters in length.";
+            return "Username is not correctly formatted, please ensure that your username contains an underscore and is no more than five characters in length.";
         }
         if (!checkPasswordComplexity(password)) {
-            return "Password is not correctly formatted; please ensure that the password contains at least eight characters, a capital letter, a number and a special character";
+            return "Password is not correctly formatted, please ensure that the password contains at least eight characters, a capital letter, a number and a special character";
         }
         if (!checkCellPhoneNumber(cellPhoneNumber)) {
             return "Cell phone number incorrectly formatted or does not contain international code.";
