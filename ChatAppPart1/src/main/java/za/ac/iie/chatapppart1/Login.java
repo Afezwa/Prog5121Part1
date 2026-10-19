@@ -77,14 +77,20 @@ public class Login  {
         return this.username != null && this.username.equals(username) && this.password.equals(password);
     }
     
+    // This is for my test file - it passes true /false
+    public String returnLoginStatus(boolean success){
+        if(success){
+            return "Welcome " + firstName + " " + lastName + " it is great to see you again.";
+        } else {
+            return "Username or password incorrect, please try again.";
+        }
+    }
+    
+    // This is for the lecturer's test - it passes username/password
     public String
             returnLoginStatus(String username, String password) {
-                if (loginUser(username, password)){
-
-                    return "Welcome " + firstName + "" + lastName + " it is great to see you again.";
-
-                } else {
-                    return "Username or password incorrect, please try again.";
-                }
+                return
+                returnLoginStatus(loginUser(username, password));
             }
 }
+                   

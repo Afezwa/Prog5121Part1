@@ -16,7 +16,7 @@ public class LoginTest {
     
     String validUsername = "kyl_1";
     String invalidUsername = "kyl!!!!!!!!!!!!!";
-    String validPassword = "Ch@ke99";
+    String validPassword = "Ch@ke99!";
     String invalidPassword = "password";
     String validCellPhoneNumber = "+27838699867";
     String invalidCellPhoneNumber = "0838699867";
@@ -90,7 +90,7 @@ public class LoginTest {
         Login login = new Login();
         login.registerUser(firstName, lastName, validUsername, validPassword, validCellPhoneNumber);
         
-        String successMsg = "Welcome " + firstName + lastName + "it is great to see you again.";
+        String successMsg = "Welcome " + firstName + " " + lastName + " it is great to see you again.";
         String failMsg = "Username or password incorrect, please try again.";
         
         assertEquals(successMsg, login.returnLoginStatus(true));

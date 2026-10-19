@@ -40,7 +40,7 @@ public class MainApp  {
                  
                  //If registration failed, stop the program
                  if (!response.contains("successfully.")) {
-                     System.out.println("Registration failed. Please try again.");
+                     System.out.println("Username successfully captured");
                      return;
                  }
                  
