@@ -39,11 +39,12 @@ public class MainApp  {
                  System.out.println(response);
                  
                  //If registration failed, stop the program
-                 if (!response.contains("successfully.")) {
-                     System.out.println("Username successfully captured");
-                     return;
-                 }
-                 
+                if (response.contains("incorrectly") 
+                        || response.contains("not correctly"))
+                        {
+                            return;
+                                    }
+                        
                  // LOGIN SECTION
                  System.out.println("\n=== USER LOGIN ===");
                  

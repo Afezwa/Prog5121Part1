@@ -47,8 +47,11 @@ public class Login  {
     //URL: https://www.w3schools.com/java/java_regex.asp AND https://stackoverflow.com/questions/15739050/south-african-mobile-number-regex
     //Accessed: 2026-09-17
     //The pattern ^\+27\d{9}$ checks that number starts with +27 and has exactly 9 more digits (total 12 chars with +)
-    public boolean checkCellPhoneNumber(String phone) {
-        return phone.matches("^\\+27\\d{9}$");
+    public boolean checkCellPhoneNumber(String cellPhoneNumber) {
+        if (cellPhoneNumber == null) {
+            return false;
+        }
+        return cellPhoneNumber.length() == 12 && cellPhoneNumber.startsWith("+27");
     }
     
     //Step 8: Register user - returns the EXACT messages they want
