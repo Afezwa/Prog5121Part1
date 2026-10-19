@@ -62,13 +62,13 @@ public class Login  {
         if (!checkCellPhoneNumber(cellPhoneNumber)) {
             return "Cell phone number incorrectly formatted or does not contain international code.";
         }
-        this.firstName = firstName;
-        this.lastName = lastName;
         this.username = username;
         this.password = password;
-        this.cellPhoneNumber = cellPhoneNumber;      
+        this.cellPhoneNumber = cellPhoneNumber;
+        this.firstName = firstName;
+        this.lastName = lastName;      
 
-        return "User registered successfully.";
+        return "Username successfully captured\nPassword successfully captured\nCell phone number successfully added.";
 
     }
     
@@ -78,8 +78,8 @@ public class Login  {
     }
     
     public String
-            returnLoginStatus(boolean success) {
-                if (success){
+            returnLoginStatus(String username, String password) {
+                if (loginUser(username, password)){
 
                     return "Welcome " + firstName + "" + lastName + " it is great to see you again.";
 
