@@ -35,11 +35,11 @@ public class MainApp  {
         System.out.print("Enter your South African cell number (+27...):");
               String cellPhoneNumber = input.nextLine();
               
-              String response = login.registerUser(firstName, lastName, username, password, cellPhoneNumber);
+              String response = login.registerUser(username, password, cellPhoneNumber, firstName, lastName);
                  System.out.println(response);
                  
                  //If registration failed, stop the program
-                 if (!response.equals("User registered successfully.")) {
+                 if (!response.contains("successfully.")) {
                      System.out.println("Registration failed. Please try again.");
                      return;
                  }
@@ -53,11 +53,8 @@ public class MainApp  {
                  System.out.print("Enter your password:");
                  String loginPassword = input.nextLine();
                  
-                 //Call loginUser to check if details match the stored ones
-                 boolean loggedIn = login.loginUser(loginUsername, loginPassword);
-                 
                  //Print out correct login message
-                 String loginMessage = login.returnLoginStatus(loggedIn);
+                 String loginMessage = login.returnLoginStatus(loginUsername, loginPassword);
                  System.out.println(loginMessage);
     }
 }
