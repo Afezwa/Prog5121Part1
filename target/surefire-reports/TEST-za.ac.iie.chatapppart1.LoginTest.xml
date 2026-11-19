@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="za.ac.iie.chatapppart1.LoginTest" time="0.139" tests="10" errors="0" skipped="0" failures="3">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="za.ac.iie.chatapppart1.LoginTest" time="0.093" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,8 +15,9 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Apache NetBeans\jdk\bin"/>
-    <property name="sun.java.command" value="C:\Users\Student\AppData\Local\Temp\surefire592275327570493820\surefirebooter-20261019105421539_3.jar C:\Users\Student\AppData\Local\Temp\surefire592275327570493820 2026-10-19T10-54-20_970-jvmRun1 surefire-20261019105421539_1tmp surefire_0-20261019105421539_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Student\AppData\Local\Temp\surefire5928003037383564255\surefirebooter-20261118184410340_3.jar C:\Users\Student\AppData\Local\Temp\surefire5928003037383564255 2026-11-18T18-44-10_139-jvmRun1 surefire-20261118184410340_1tmp surefire_0-20261118184410340_2tmp"/>
     <property name="jdk.debug" value="release"/>
+    <property name="test" value="za.ac.iie.chatapppart1.LoginTest"/>
     <property name="surefire.test.class.path" value="C:\Users\Student\Documents\Github\Prog5121Part1\ChatAppPart1\target\test-classes;C:\Users\Student\Documents\Github\Prog5121Part1\ChatAppPart1\target\classes;C:\Users\Student\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.0\junit-jupiter-5.10.0.jar;C:\Users\Student\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\Student\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Student\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\Student\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Student\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.0\junit-jupiter-params-5.10.0.jar;C:\Users\Student\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\Student\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Student"/>
@@ -30,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Student\AppData\Local\Temp\surefire592275327570493820\surefirebooter-20261019105421539_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Student\AppData\Local\Temp\surefire5928003037383564255\surefirebooter-20261118184410340_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="25.0.1+8-LTS"/>
@@ -61,53 +62,14 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="testCheckUserName_CorrectlyFormatted" classname="za.ac.iie.chatapppart1.LoginTest" time="0.032"/>
-  <testcase name="testCheckCellPhoneNumber_CorrectlyFormatted" classname="za.ac.iie.chatapppart1.LoginTest" time="0.002"/>
-  <testcase name="testLoginUser_Failed" classname="za.ac.iie.chatapppart1.LoginTest" time="0.006"/>
-  <testcase name="testReturnLoginStatus_Messages" classname="za.ac.iie.chatapppart1.LoginTest" time="0.014">
-    <failure message="expected: &lt;Welcome Kyle Smith it is great to see you again.&gt; but was: &lt;Welcome null null it is great to see you again.&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Welcome Kyle Smith it is great to see you again.> but was: <Welcome null null it is great to see you again.>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1141)
-	at za.ac.iie.chatapppart1.LoginTest.testReturnLoginStatus_Messages(LoginTest.java:96)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-]]></failure>
-  </testcase>
-  <testcase name="testLoginUser_Successful" classname="za.ac.iie.chatapppart1.LoginTest" time="0.004">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:179)
-	at za.ac.iie.chatapppart1.LoginTest.testLoginUser_Successful(LoginTest.java:76)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-]]></failure>
-  </testcase>
-  <testcase name="testCheckPasswordComplexity_MeetsRequirements" classname="za.ac.iie.chatapppart1.LoginTest" time="0.002"/>
-  <testcase name="testCheckPasswordComplexity_DoesNotMeetRequirements" classname="za.ac.iie.chatapppart1.LoginTest" time="0.001"/>
-  <testcase name="testCheckUserName_IncorrectlyFormatted" classname="za.ac.iie.chatapppart1.LoginTest" time="0.002"/>
-  <testcase name="testRegisterUser_Successful" classname="za.ac.iie.chatapppart1.LoginTest" time="0.01">
-    <failure message="expected: &lt;User registered successfully.&gt; but was: &lt;Username is not correctly formatted, please ensure that your username contains an underscore and is no more than five characters in length.&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <User registered successfully.> but was: <Username is not correctly formatted, please ensure that your username contains an underscore and is no more than five characters in length.>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1141)
-	at za.ac.iie.chatapppart1.LoginTest.testRegisterUser_Successful(LoginTest.java:69)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-]]></failure>
-  </testcase>
+  <testcase name="testCheckUserName_CorrectlyFormatted" classname="za.ac.iie.chatapppart1.LoginTest" time="0.033"/>
+  <testcase name="testCheckCellPhoneNumber_CorrectlyFormatted" classname="za.ac.iie.chatapppart1.LoginTest" time="0.003"/>
+  <testcase name="testLoginUser_Failed" classname="za.ac.iie.chatapppart1.LoginTest" time="0.004"/>
+  <testcase name="testReturnLoginStatus_Messages" classname="za.ac.iie.chatapppart1.LoginTest" time="0.003"/>
+  <testcase name="testLoginUser_Successful" classname="za.ac.iie.chatapppart1.LoginTest" time="0.001"/>
+  <testcase name="testCheckPasswordComplexity_MeetsRequirements" classname="za.ac.iie.chatapppart1.LoginTest" time="0.001"/>
+  <testcase name="testCheckPasswordComplexity_DoesNotMeetRequirements" classname="za.ac.iie.chatapppart1.LoginTest" time="0.002"/>
+  <testcase name="testCheckUserName_IncorrectlyFormatted" classname="za.ac.iie.chatapppart1.LoginTest" time="0.0"/>
+  <testcase name="testRegisterUser_Successful" classname="za.ac.iie.chatapppart1.LoginTest" time="0.001"/>
   <testcase name="testCheckCellPhoneNumber_IncorrectlyFormatted" classname="za.ac.iie.chatapppart1.LoginTest" time="0.002"/>
 </testsuite>

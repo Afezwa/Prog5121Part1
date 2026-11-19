@@ -47,9 +47,13 @@ public class Login  {
     //URL: https://www.w3schools.com/java/java_regex.asp AND https://stackoverflow.com/questions/15739050/south-african-mobile-number-regex
     //Accessed: 2026-09-17
     //The pattern ^\+27\d{9}$ checks that number starts with +27 and has exactly 9 more digits (total 12 chars with +)
-    public boolean checkCellPhoneNumber(String phone) {
-        return phone.matches("^\\+27\\d{9}$");
-    }
+    public boolean checkCellPhoneNumber(String cellPhoneNumber) {
+        if (cellPhoneNumber == null) 
+            return false;
+        
+        return cellPhoneNumber.matches("\\+27\\d{9}");
+        }
+    
     
     //Step 8: Register user - returns the EXACT messages they want
     public String registerUser(String username, String password, String cellPhoneNumber, String firstName, String lastName) {
@@ -62,13 +66,13 @@ public class Login  {
         if (!checkCellPhoneNumber(cellPhoneNumber)) {
             return "Cell phone number incorrectly formatted or does not contain international code.";
         }
+        this.firstName= firstName;
+        this.lastName = lastName;
         this.username = username;
         this.password = password;
-        this.cellPhoneNumber = cellPhoneNumber;
-        this.firstName = firstName;
-        this.lastName = lastName;      
+        this.cellPhoneNumber = cellPhoneNumber;      
 
-        return "Username successfully captured\nPassword successfully captured\nCell phone number successfully added.";
+        return "User registered successfully.";
 
     }
     
@@ -80,7 +84,7 @@ public class Login  {
     // This is for my test file - it passes true /false
     public String returnLoginStatus(boolean success){
         if(success){
-            return "Welcome " + firstName + " " + lastName + " it is great to see you again.";
+            return "Welcome " + firstName + lastName + "it is great to see you again.";
         } else {
             return "Username or password incorrect, please try again.";
         }

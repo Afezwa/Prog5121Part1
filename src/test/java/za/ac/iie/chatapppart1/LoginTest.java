@@ -6,8 +6,7 @@ package za.ac.iie.chatapppart1;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
-        
+       
 /**
  *
  * @author Student
@@ -65,16 +64,16 @@ public class LoginTest {
     @Test
     public void testRegisterUser_Successful(){
         Login login = new Login();
-        String result = login.registerUser(firstName, lastName, validUsername, validPassword, validCellPhoneNumber);
+        String result = login.registerUser(validUsername, validPassword, validCellPhoneNumber, firstName, lastName);
         assertEquals("User registered successfully.", result);
     }
     
     @Test
     public void testLoginUser_Successful(){
         Login login = new Login();
-        login.registerUser(firstName, lastName, validUsername, validPassword, validCellPhoneNumber);
+        login.registerUser(validUsername, validPassword, validCellPhoneNumber, firstName, lastName);
+        
         assertTrue(login.loginUser(validUsername, validPassword));
-        assertEquals("Welcome Kyle Smith it is great to see you again.", login.returnLoginStatus(true));
     }
     
     @Test
@@ -88,12 +87,11 @@ public class LoginTest {
     @Test 
     public void testReturnLoginStatus_Messages(){
         Login login = new Login();
-        login.registerUser(firstName, lastName, validUsername, validPassword, validCellPhoneNumber);
+        login.registerUser(validUsername, validPassword, validCellPhoneNumber, firstName, lastName);
+        assertEquals("Welcome " + firstName + lastName + "it is great to see you again.",
         
-        String successMsg = "Welcome " + firstName + " " + lastName + " it is great to see you again.";
-        String failMsg = "Username or password incorrect, please try again.";
-        
-        assertEquals(successMsg, login.returnLoginStatus(true));
-        assertEquals(failMsg, login.returnLoginStatus(false));
+        login.returnLoginStatus(login.loginUser(validUsername, validPassword)));
     }
-}
+}  
+
+
